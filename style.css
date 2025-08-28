@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #00d4ff, #008cff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero span {
+    color: yellow;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: white;
+    color: #008cff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: #eee;
+}
+
+/* About Me */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about-container img {
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Projects */
+.projects {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Contact */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px;
+    background: #00d4ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background: #008cff;
+}
+
+.success-message {
+    color: green;
+    display: none;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container img {
+        margin-bottom: 20px;
+    }
+}
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(90deg, #a8edea, #fed6e3);
+}
+
+/* Navbar text */
+nav .logo, nav ul li a {
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+/* Projects Section */
+.projects {
+    background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #eee;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* Buttons */
+.hero .btn, .project-card a, .contact button {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #333;
+    font-weight: bold;
+    border: none;
+}
+
+.hero .btn:hover, .project-card a:hover, .contact button:hover {
+    background: linear-gradient(135deg, #8fd3f4, #84fab0);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #a8edea, #fed6e3);
+    color: #333;
+}
+section {
+  min-height: 100vh;   /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center vertically */
+  align-items: center;      /* Center horizontally */
+  padding: 60px 20px;
+}

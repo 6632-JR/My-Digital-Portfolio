@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tap-to-Flip ID Card</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f0f0f0;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container {
+      width: 320px;
+      height: 200px;
+      perspective: 1000px;
+      margin-bottom: 20px;
+    }
+
+    /* Hidden checkbox to toggle flip */
+    #flip-toggle {
+      display: none;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      cursor: pointer;
+    }
+
+    /* Flip the card when checkbox is checked */
+    #flip-toggle:checked + .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .card-front {
+      background-color: yellow;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .card-info {
+      flex: 1;
+    }
+
+    .card-front h2 {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    .card-front p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .card-front img {
+      width: 80px;
+      height: 100px;
+      border: 2px solid black;
+      border-radius: 4px;
+      object-fit: cover;
+      background-color: white;
+    }
+
+    .card-back {
+      background-color: yellow;
+      color: black;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .card-back h3 {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+
+    .card-back p {
+      margin: 4px 0;
+      font-size: 15px;
+    }
+
+    /* Back to Home Button */
+    .back-home {
+      text-decoration: none;
+      background: linear-gradient(45deg, #ff6600, #ff9933);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: linear-gradient(45deg, #ff4500, #ff8000);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <!-- Tap area is the label for the hidden checkbox -->
+    <label>
+      <input type="checkbox" id="flip-toggle">
+      <div class="card">
+        
+        <!-- Front Side -->
+        <div class="card-side card-front">
+          <div class="card-info">
+            <h2>H. Janakiraman</h2>
+            <p>Web Designer</p>
+          </div>
+          <img src="/storage/emulated/0/Android/data/com.fazil.htmleditor/files/Documents/Simple HTML/media/images/VA6632_20240713_181133_492_20.jpg" alt="Student Photo">
+        </div>
+
+        <!-- Back Side -->
+        <div class="card-side card-back">
+          <h3>Name: H. Janakiraman</h3>
+          <p>Email: 6632@velsrscollege.com</p>
+          <p>Mobile: +91 9876543210</p>
+        </div>
+
+      </div>
+    </label>
+  </div>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-home">⬅ Back to Home</a>
+
+</body>
+</html>
